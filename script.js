@@ -41,7 +41,7 @@ async function detectAllLabeledFaces() {
       const descriptions = [];
       for (let i = 1; i <= 2; i++) {
         const img = await faceapi.fetchImage(
-          `http://192.168.2.69:8080/data/${label}/${i}.jpg`
+          `${window.location.href}data/${label}/${i}.jpg`
         );
         const detection = await faceapi
           .detectSingleFace(img)
