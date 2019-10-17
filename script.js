@@ -1,9 +1,8 @@
 let detect = async () => {
-  console.log(window.location.href)
   // Load model
-  await faceapi.nets.ssdMobilenetv1.loadFromUri("/models");
-  await faceapi.nets.faceRecognitionNet.loadFromUri("/models");
-  await faceapi.nets.faceLandmark68Net.loadFromUri("/models");
+  await faceapi.nets.ssdMobilenetv1.loadFromUri("/facedetect/models");
+  await faceapi.nets.faceRecognitionNet.loadFromUri("/facedetect/models");
+  await faceapi.nets.faceLandmark68Net.loadFromUri("/facedetect/models");
   
   const input = document.getElementById("myImg");
 
