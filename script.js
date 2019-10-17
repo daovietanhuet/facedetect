@@ -1,4 +1,5 @@
 let detect = async () => {
+  console.log(window.location.href)
   // Load model
   await faceapi.nets.ssdMobilenetv1.loadFromUri("/models");
   await faceapi.nets.faceRecognitionNet.loadFromUri("/models");
